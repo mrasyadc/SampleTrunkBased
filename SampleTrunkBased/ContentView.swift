@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var viewModel:LearnerDatabaseProtocol = WorkingLearnerViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+        
+        Button(action:{
+            let success = viewModel.getLearnerbyId(id: 100)
+        },label:{
+            Text("Tap")
+        })
         .padding()
+        
+
     }
 }
 
