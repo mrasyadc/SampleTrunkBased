@@ -7,13 +7,14 @@
 
 import Foundation
 
-
-class SampleLearnerViewModel:LearnerDatabaseProtocol{
+class SampleLearnerViewModel: LearnerDatabaseProtocol {
     func getLearnerbyId(id: Int) -> Bool {
+        print("get learner \(id) is called")
         return true
     }
-    
+
     func editLearnerBy(id: Int) -> Bool {
+        print("learner \(id) is edited")
         return true
     }
 }
